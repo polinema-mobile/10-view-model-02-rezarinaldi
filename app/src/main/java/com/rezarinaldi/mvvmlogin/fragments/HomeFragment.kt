@@ -1,7 +1,6 @@
 package com.rezarinaldi.mvvmlogin.fragments
 
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -21,7 +20,6 @@ class HomeFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         binding.fragment = this
         email = "Saya, ${arguments?.getString("email").toString()}"
-        Log.e("email", email)
         return binding.root
     }
 }

@@ -1,7 +1,6 @@
 package com.rezarinaldi.mvvmlogin.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -36,9 +35,7 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.penggunaLiveData.observe(viewLifecycleOwner, { value ->
-            Log.e("observePengguna", value.email + " " + value.password)
             mPengguna = value
-            Log.e("mPengguna", mPengguna.email + " " + mPengguna.password)
         })
 
         viewModel.loggedLiveData.observe(viewLifecycleOwner, { value ->

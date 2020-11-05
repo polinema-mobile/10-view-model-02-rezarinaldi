@@ -2,6 +2,7 @@ package com.rezarinaldi.mvvmlogin.fragments
 
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -30,7 +31,7 @@ class SplashFragment : Fragment() {
 
         binding.splashViewModel = viewModel
         binding.lifecycleOwner = this
-        Handler().postDelayed({
+        Handler(Looper.getMainLooper()).postDelayed({
             findNavController().navigate(R.id.action_splashFragment_to_loginFragment)
         }, 3000)
 
